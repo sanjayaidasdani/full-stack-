@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luminara — Cart</title>
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+  <nav>
+<a href="home.html" class="nav-logo"> LUMINARA</a>
+    <div class="nav-links">
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="order-history.html">Order History</a>
+      <div class="auth-buttons">
+
+        <a href="signin.html" class="auth-btn auth-btn-signin">Sign In</a>
+        <a href="signup.html" class="auth-btn auth-btn-signup">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <section class="section">
+      <div class="section-title">
+        <h2>Your Cart</h2>
+        <p>Review items before checkout.</p>
+      </div>
+
+      <div class="card" style="padding:1.2rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Qty</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div style="display:flex;gap:10px;align-items:center;">
+                  <img src="chatgpt_image_mar_20_2026_01_09_34_pmm.png" alt="item" style="width:48px;height:48px;object-fit:cover;border-radius:8px;" />
+                  <div>
+                    <div style="color:var(--gold);font-weight:900;">Golden Shine Ring</div>
+                    <div style="font-size:0.9rem;color:rgba(232,232,232,0.75);">18K Gold</div>
+                  </div>
+                </div>
+              </td>
+              <td>$199</td>
+              <td>
+                <input type="number" value="1" min="1" style="max-width:90px;" />
+              </td>
+              <td>$199</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="display:flex;gap:10px;align-items:center;">
+                  <img src="chatgpt_image_mar_20_2026_01_09_34_pmm.png" alt="item" style="width:48px;height:48px;object-fit:cover;border-radius:8px;" />
+                  <div>
+                    <div style="color:var(--gold);font-weight:900;">Solstice Necklace</div>
+                    <div style="font-size:0.9rem;color:rgba(232,232,232,0.75);">Luxury Pendant</div>
+                  </div>
+                </div>
+              </td>
+              <td>$299</td>
+              <td>
+                <input type="number" value="1" min="1" style="max-width:90px;" />
+              </td>
+              <td>$299</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="display:flex;justify-content:flex-end;gap:1rem;flex-wrap:wrap;margin-top:1.3rem;">
+          <div style="min-width:220px;text-align:right;">
+            <div style="color:rgba(232,232,232,0.75);">Subtotal</div>
+            <div style="color:var(--gold);font-weight:1000;font-size:1.4rem;">$498</div>
+          </div>
+          <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p> LUMINARA © 2024 | Crafted for Eternity | Est. 1999</p>
+  </footer>
+</body>
+</html>
+
