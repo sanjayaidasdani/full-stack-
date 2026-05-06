@@ -6,4 +6,5 @@ signup
 
 signin
 <img width="1222" height="865" alt="image" src="https://github.com/user-attachments/assets/b91a5503-70fa-49ff-a6df-4322a0b3ce17" />
-<img width="919" height="853" alt="image" src="https://github.com/user-attachments/assets/b3e1ea4e-88f0-489b-a93c-daeac4899fcc" />
+<img width="904" height="859" alt="image" src="https://github.com/user-attachments/assets/6163176e-b84a-4839-b718-bef2f7c54581" />
+
