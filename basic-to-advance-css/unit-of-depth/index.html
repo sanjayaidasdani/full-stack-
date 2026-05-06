@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Size Units in Depth: px, %, vw, vh, em, rem</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #2c3e50; }
+        h2 { color: #34495e; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .demo { margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9; }
+        .unit-box { margin: 10px 0; padding: 20px; border-radius: 5px; text-align: center; font-weight: bold; color: white; }
+        .px-box { background-color: #e74c3c; width: 200px; height: 100px; }
+        .percent-box { background-color: #27ae60; width: 50%; height: 100px; }
+        .vw-box { background-color: #f39c12; width: 50vw; height: 20vh; }
+        .vh-box { background-color: #9b59b6; width: 30vw; height: 50vh; }
+        .em-box { background-color: #1abc9c; font-size: 1.5em; width: 20em; height: 10em; }
+        .rem-box { background-color: #3498db; font-size: 2rem; width: 15rem; height: 8rem; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #3498db; color: white; }
+        .responsive-demo { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+        .responsive-item { background-color: #95a5a6; color: white; padding: 1rem; flex: 1 1 300px; }
+        @media (max-width: 600px) { .responsive-item { flex: 1 1 100%; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Size Units in Depth: Unlocking px, %, vw, vh, em, rem</h1>
+        <section><h2>Introduction</h2><p>Absolute (px) vs relative (%, vw, vh, em, rem). Resize window to see!</p></section>
+        <section><h2>1. px</h2><p>Fixed pixels. Precise.</p><div class="demo"><div class="unit-box px-box">200px x 100px</div></div></section>
+        <section><h2>2. %</h2><p>% of parent.</p><div class="demo" style="width: 400px; height: 150px; background: #ecf0f1;"><div class="unit-box percent-box">50%</div></div></section>
+        <section><h2>3. vw/vh</h2><p>% of viewport.</p><div class="demo"><div class="unit-box vw-box">50vw x 20vh</div><div class="unit-box vh-box">30vw x 50vh</div></div></section>
+        <section><h2>4. em</h2><p>Parent font-size.</p><div class="demo" style="font-size: 20px;"><div class="unit-box em-box">20em x 10em</div></div></section>
+        <section><h2>5. rem</h2><p>Root font-size.</p><div class="demo"><div class="unit-box rem-box">15rem x 8rem</div></div></section>
+        <section><h2>Comparison</h2><table><thead><tr><th>Unit</th><th>Relative</th><th>Use</th></tr></thead><tbody><tr><td>px</td><td>Absolute</td><td>Precise</td></tr><tr><td>%</td><td>Parent</td><td>Layout</td></tr><tr><td>vw/vh</td><td>Viewport</td><td>Responsive</td></tr><tr><td>em</td><td>Parent font</td><td>Components</td></tr><tr><td>rem</td><td>Root font</td><td>Typography</td></tr></tbody></table></section>
+        <section><h2>Responsive Mix</h2><div class="responsive-demo"><div class="responsive-item">rem padding</div><div class="responsive-item">vw flex</div><div class="responsive-item">Stacks on mobile</div></div></section>
+    </div>
+</body>
+</html>

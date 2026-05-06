@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Mastery - Master Modern CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            overflow-x: hidden;
+            background: #0f172a;
+            color: white;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        nav a {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 800;
+            text-decoration: none;
+            background: linear-gradient(135deg, #6366f1, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #3730a3 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+            animation: float 8s infinite ease-in-out;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(167, 139, 250, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -200px;
+            left: -200px;
+            animation: float 10s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(30px) translateX(20px); }
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            animation: slideDown 0.8s ease-out;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeIn 0.8s ease-out 0.4s both;
+            margin-bottom: 2rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .btn {
+            padding: 14px 35px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(99, 102, 241, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(99, 102, 241, 0.8);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: #6366f1;
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .stats {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeIn 0.8s ease-out 0.6s both;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        /* HIGHLIGHTS */
+        .highlights {
+            padding: 4rem 2rem;
+            background: linear-gradient(180deg, rgba(99, 102, 241, 0.05) 0%, rgba(167, 139, 250, 0.05) 100%);
+            text-align: center;
+        }
+
+        .highlights h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tag {
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: rgba(99, 102, 241, 0.3);
+            border-color: rgba(99, 102, 241, 0.6);
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(99, 102, 241, 0.2);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                gap: 0.75rem;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 0.95rem;
+            }
+
+            .stats {
+                gap: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <a href="#home">🎨 CSS MASTERY</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Master Modern CSS</h1>
+            <p>Learn 13 Essential CSS Concepts & Become a CSS Expert</p>
+            
+            <div class="cta-buttons">
+                <a href="index.html" class="btn btn-primary">🚀 Start Learning</a>
+                <a href="#highlights" class="btn btn-secondary">Learn More →</a>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">13</div>
+                    <div class="stat-label">Core Topics</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Examples</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Possibilities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="highlights" id="highlights">
+        <h2>Topics Covered</h2>
+        <div class="tags">
+            <span class="tag">📋 Stylesheets</span>
+            <span class="tag">🔤 Typography</span>
+            <span class="tag">📦 Box Model</span>
+            <span class="tag">📐 Display</span>
+            <span class="tag">📍 Position</span>
+            <span class="tag">📏 Units</span>
+            <span class="tag">🌊 Float</span>
+            <span class="tag">🎯 Flexbox</span>
+            <span class="tag">✨ Shadows</span>
+            <span class="tag">⏱️ Transitions</span>
+            <span class="tag">🎬 Animations</span>
+            <span class="tag">🔄 Transforms</span>
+            <span class="tag">📱 Responsive</span>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>🎨 CSS Mastery © 2024 | Master Modern CSS with Interactive Examples</p>
+    </footer>
+</body>
+</html>

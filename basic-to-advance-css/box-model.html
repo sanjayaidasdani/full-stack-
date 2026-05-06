@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Four Layers of the Box Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .demo {
+            margin: 20px 0;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .content1{
+            width: 300px;
+            height: 100px;
+            background-color: lightyellow;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+
+        .padding2 {
+            background-color: lightblue;
+            padding: 30px;
+            padding-top: 20px;
+            padding-right: 40px;
+            padding-bottom: 20px;
+            padding-left: 40px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .border3{
+            background-color: lightgreen;
+            padding: 20px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: red;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .margin4-1{
+            background-color: orange;
+            padding: 20px;
+            border-width: 3px;
+            border-style: solid;
+            border-color: purple;
+            margin: 30px;
+            display: inline-block;
+        }
+        .margin4-2 {
+            background-color: yellow;
+            padding: 20px;
+            border-width: 3px;
+            border-style: dashed;
+            border-color: navy;
+            margin-top: 30px;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box model css style </h1>
+    <p>all concep of box model </p>
+
+    <h2>1. Content</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero perferendis, maxime amet facilis dolore nihil doloremque reprehenderit nobis cupiditate minus eum numquam iure atque nemo ducimus laborum pariatur, voluptate veritatis, soluta sapiente accusantium ipsa magnam! Soluta officiis adipisci distinctio laboriosam cum tempore, expedita, minus ullam velit ipsum eveniet nulla corporis!</p>
+    <div class="demo">
+        <div class="content-d1">contet layer</div>
+    </div>
+
+    <h2>2. Padding</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus placeat nihil nesciunt sunt! Repudiandae neque aut earum possimus eveniet itaque est reprehenderit perferendis commodi! Totam, eius assumenda facilis maiores pariatur dolores ullam est obcaecati tenetur sequi nobis debitis iure animi suscipit porro dolorum omnis nesciunt iusto accusamus reiciendis! Sed, vel?</p>
+        <div class="demo">
+        <div class="padding2">padding -top, -bottom ,-right ,-padding left  </div>
+    </div>
+
+    <h2>3. Border</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores nihil aliquam modi labore. Illum, esse atque perferendis sapiente quis maxime. Nemo libero nulla provident eveniet corrupti quos expedita, temporibus eius officiis animi doloribus, corporis, quia ullam quod laborum possimus vitae iste non officia perferendis. Quam unde soluta sapiente iste veritatis.</p>
+    <div class="demo">
+        <div class="border3">boredr -width , style </div>
+    </div>
+
+    <h2>4. Margin</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem repudiandae vitae iste itaque optio inventore maiores neque modi perferendis odit! Voluptatum nulla, dignissimos debitis, explicabo dolorum labore possimus sed sapiente corporis alias cumque accusantium maxime odio fugiat reprehenderit! Magni cum perspiciatis alias ex dicta. Eveniet sit laboriosam officia aut fugiat!</p>
+    <div class="demo" style="background-color: lightgray;">
+        <div class="margin4-1">margin box  1 direct margin -30 px </div>
+        <div class="margin4-2">margin box 2 margin left, right , top , bottom </div>
+    </div>
+</body>
+</html>

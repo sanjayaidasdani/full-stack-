@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up — Aura</title>
+  <style>
+    @keyframes slideInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes slideInLeft{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes glow{0%,100%{box-shadow:0 10px 30px rgba(99,102,241,0.25)}50%{box-shadow:0 14px 40px rgba(99,102,241,0.35)}}
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#f5f5f6;
+      --panel:#071026;
+      --card:#fff;
+      --accent:#7c5cbf;
+      --muted:#6b7280;
+    }
+    
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:linear-gradient(135deg,var(--bg),#efefef);color:#1f2937}
+
+    /* Above 768px - Desktop */
+    @media(min-width:769px){
+      .wrap{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;animation:fadeIn 0.8s ease-out}
+      
+      .mobile-header{display:none}
+      
+      .left{background:linear-gradient(135deg,var(--panel),#0a1220);color:white;padding:60px;display:flex;flex-direction:column;justify-content:center;box-shadow:inset -1px 0 0 rgba(255,255,255,0.1);animation:slideInLeft 0.9s cubic-bezier(0.34,1.56,0.64,1)}
+      .left h1{font-size:clamp(2rem,5vw,3rem);font-weight:300;line-height:1.2;margin-bottom:20px}
+      .left p{max-width:400px;line-height:1.6;font-size:15px;color:rgba(255,255,255,0.85)}
+      
+      .right{display:flex;justify-content:center;align-items:center;background:white;padding:40px}
+      
+      .card{width:100%;max-width:450px;padding:40px;background:white;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.1);animation:slideInUp 0.9s cubic-bezier(0.34,1.56,0.64,1) 0.15s both;border:1px solid rgba(0,0,0,0.05)}
+      
+      .badge{display:inline-block;padding:10px 20px;border-radius:999px;background:linear-gradient(135deg,#1a1a1a,#2d2d2d);color:#d4af37;font-weight:700;font-size:12px;letter-spacing:0.2em;margin-bottom:16px;animation:fadeIn 0.8s ease-out 0.3s both;border:1px solid #d4af37;font-family:serif;text-transform:uppercase}
+      
+      h2{font-size:clamp(1.8rem,3vw,2.2rem);font-weight:600;margin-bottom:8px;letter-spacing:-0.5px;animation:slideInUp 0.8s ease-out 0.2s both}
+      
+      .subtitle{color:var(--muted);font-size:14px;margin-bottom:24px;line-height:1.6;animation:slideInUp 0.8s ease-out 0.25s both}
+      
+      label{display:block;font-size:12px;color:var(--muted);font-weight:600;letter-spacing:0.1em;margin-bottom:8px;text-transform:uppercase}
+      input{width:100%;padding:14px 16px;border:1.5px solid #e5e7eb;border-radius:10px;font-size:15px;outline:none;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);background:#fafbfc;margin-bottom:12px}
+      input::placeholder{color:#a3a3a3}
+      input:hover{border-color:#d1d5db;background:white;box-shadow:0 4px 12px rgba(99,102,241,0.08)}
+      input:focus{box-shadow:0 0 0 4px rgba(124,92,191,0.15),0 8px 24px rgba(124,92,191,0.2);border-color:var(--accent);background:white;transform:scale(1.01)}
+      
+      .row{display:flex;gap:14px}
+      .half{flex:1}
+      
+      .opts{margin:14px 0 24px;display:flex;align-items:center;gap:8px}
+      .opts label{font-size:14px;display:flex;align-items:center;gap:8px;cursor:pointer;text-transform:none;letter-spacing:normal;margin:0}
+      .opts input{width:18px;height:18px;flex-shrink:0;cursor:pointer;accent-color:var(--accent);margin:0}
+      
+      button{width:100%;padding:14px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:white;border:none;cursor:pointer;border-radius:10px;font-weight:700;font-size:15px;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 10px 28px rgba(99,102,241,0.25);position:relative;overflow:hidden;animation:glow 2.5s ease-in-out infinite}
+      button::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);transform:translateX(-100%);transition:transform 0.7s}
+      button:hover::before{transform:translateX(100%)}
+      button:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(99,102,241,0.35)}
+      button:active{transform:translateY(0)}
+      
+      .foot{margin-top:24px;text-align:center;color:var(--muted);font-size:13px}
+      .foot a{color:var(--accent);font-weight:700;text-decoration:none;transition:opacity 0.2s}
+      .foot a:hover{opacity:0.8}
+    }
+
+    /* 480px - 768px - Tablet */
+    @media(min-width:480px) and (max-width:768px){
+      .wrap{min-height:100vh;display:grid;grid-template-columns:1fr;animation:fadeIn 0.8s ease-out}
+      
+      .mobile-header{display:block;background:linear-gradient(135deg,var(--panel),#0a1220);color:white;text-align:center;padding:32px 24px;border-bottom:1px solid rgba(255,255,255,0.1)}
+      .mobile-header h1{font-size:22px;font-weight:300;margin-bottom:8px}
+      .mobile-header p{color:rgba(255,255,255,0.8);font-size:13px}
+      
+      .left{display:none}
+      
+      .right{display:flex;justify-content:center;align-items:center;background:white;padding:32px 20px}
+      
+      .card{width:100%;max-width:100%;padding:32px;background:white;border-radius:14px;box-shadow:0 16px 40px rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.05)}
+      
+      .badge{padding:6px 12px;font-size:10px}
+      h2{font-size:20px;font-weight:600}
+      .subtitle{font-size:13px;margin-bottom:18px}
+      
+      label{font-size:11px;margin-bottom:6px}
+      input{padding:12px 14px;font-size:14px;margin-bottom:10px}
+      
+      .row{gap:12px}
+      
+      .opts{margin:10px 0 16px}
+      .opts label{font-size:13px}
+      
+      button{padding:12px;font-size:14px}
+    }
+
+    /* Below 480px - Mobile */
+    @media(max-width:479px){
+      .wrap{min-height:100vh;display:grid;grid-template-columns:1fr;animation:fadeIn 0.8s ease-out}
+      
+      .mobile-header{display:block;background:linear-gradient(135deg,var(--panel),#0a1220);color:white;text-align:center;padding:24px 16px;border-bottom:1px solid rgba(255,255,255,0.1)}
+      .mobile-header h1{font-size:18px;font-weight:300;margin-bottom:4px}
+      .mobile-header p{color:rgba(255,255,255,0.8);font-size:12px;display:none}
+      
+      .left{display:none}
+      
+      .right{display:flex;justify-content:center;align-items:center;background:white;padding:18px 14px;min-height:auto}
+      
+      .card{width:100%;max-width:100%;padding:18px;background:white;border-radius:11px;box-shadow:0 10px 30px rgba(0,0,0,0.08);border:none}
+      
+      .badge{padding:4px 10px;font-size:9px;margin-bottom:10px}
+      h2{font-size:16px;font-weight:600;margin-bottom:4px}
+      .subtitle{font-size:12px;margin-bottom:12px}
+      
+      label{font-size:10px;margin-bottom:4px}
+      input{padding:10px 12px;font-size:13px;margin-bottom:8px;border-radius:8px}
+      
+      .row{gap:8px}
+      .half input{margin-bottom:8px}
+      
+      .opts{margin:8px 0 12px;flex-wrap:wrap}
+      .opts label{font-size:12px}
+      .opts input{width:16px;height:16px}
+      
+      button{padding:10px;font-size:13px;border-radius:8px}
+      
+      .foot{margin-top:12px;font-size:11px}
+    }
+  </style>
+</head>
+<body>
+  <div class="mobile-header">
+    <h1>Welcome to Aura</h1>
+    <p>Discover timeless elegance</p>
+  </div>
+
+  <div class="wrap">
+    <div class="left">
+      <h1>Discover Your<br/>Signature Style</h1>
+      <p>Experience curated collections of exquisite jewelry. Each piece is handcrafted with precision and celebrates timeless elegance.</p>
+    </div>
+
+    <div class="right">
+      <div class="card">
+        <div class="badge">Aura</div>
+        <h2>Join Aura Collective</h2>
+        <p class="subtitle">Create your account to access exclusive collections, personalized styling, and special member benefits.</p>
+
+        <form>
+          <div class="row">
+            <div class="half">
+              <label for="first">First name</label>
+              <input id="first" name="first" type="text" placeholder="Jane" required>
+            </div>
+            <div class="half">
+              <label for="last">Last name</label>
+              <input id="last" name="last" type="text" placeholder="Doe" required>
+            </div>
+          </div>
+
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+          <div class="row">
+            <div class="half">
+              <label for="password">Password</label>
+              <input id="password" name="password" type="password" placeholder="8+ characters" required>
+            </div>
+            <div class="half">
+              <label for="confirm">Confirm</label>
+              <input id="confirm" name="confirm" type="password" placeholder="Repeat password" required>
+            </div>
+          </div>
+
+          <div class="opts">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I agree to the terms</label>
+          </div>
+
+          <button type="submit">Create account</button>
+
+          <p class="foot">Already have an account? <a href="signin.html">Sign in</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+            }
+
+            .live-now {
+            width: 100px;
+            padding: 10px;
+            background: red;
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+            /* name duration timing loop */
+            animation: pulse 1.5s ease-in-out infinite;
+            }
+</style>
+</head>
+<body>
+<div class="live-now">LIVE SCORE</div>
+</body>
+</html>
