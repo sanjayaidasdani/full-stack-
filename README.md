@@ -1,7 +1,9 @@
-the main-pro file has an main project 
+css-master-project 
 
+signup
+<img width="1129" height="862" alt="image" src="https://github.com/user-attachments/assets/a4269420-876f-4b41-aa6f-ee4efff14788" />
+<img width="907" height="866" alt="image" src="https://github.com/user-attachments/assets/195a4d6d-a7c2-4624-80c7-3f5e81e516c2" />
 
-<img width="1155" height="850" alt="image" src="https://github.com/user-attachments/assets/5bc1f388-a0a2-4b7d-91ba-ebda65a8ea05" />
-<img width="854" height="856" alt="image" src="https://github.com/user-attachments/assets/0fc6d5e7-a640-47f3-8b9c-08282eadabec" />
-<img width="1219" height="831" alt="image" src="https://github.com/user-attachments/assets/0653103f-1f89-4086-a227-a876f3ed35f0" />
-<img width="1020" height="816" alt="image" src="https://github.com/user-attachments/assets/43051673-7d8a-4bc6-899c-9313830cf2d0" />
+signin
+<img width="1222" height="865" alt="image" src="https://github.com/user-attachments/assets/b91a5503-70fa-49ff-a6df-4322a0b3ce17" />
+<img width="919" height="853" alt="image" src="https://github.com/user-attachments/assets/b3e1ea4e-88f0-489b-a93c-daeac4899fcc" />
