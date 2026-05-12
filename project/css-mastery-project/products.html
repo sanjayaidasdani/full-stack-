@@ -28,27 +28,138 @@
         <h2>Shop Categories</h2>
         <p>Browse top-selling products and preview your store catalog.</p>
       </div>
-      <div class="filter-row">
-        <input id="productSearch" class="search-input" type="search" placeholder="Search products" />
-        <select id="productSort" class="sort-select">
-          <option value="featured">Featured</option>
-          <option value="price-asc">Price: Low to High</option>
-          <option value="price-desc">Price: High to Low</option>
-        </select>
+
+      <!-- Static product grid (no JS) -->
+      <div id="productGrid" class="product-grid" aria-label="Product grid">
+        <article class="product-card" aria-label="Desk Lamp">
+          <div class="product-media">
+            <img src="desk-lamp.webp" alt="Desk Lamp" />
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Desk Lamp</h3>
+            <p class="product-price">$49.99</p>
+            <div class="product-actions">
+              <a class="btn btn-secondary" href="product-details.html">View</a>
+              <a class="btn btn-primary" href="cart.html">Add to Cart</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" aria-label="Duffel Bag">
+          <div class="product-media">
+            <img src="duffel-bag.avif" alt="Duffel Bag" />
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Duffel Bag</h3>
+            <p class="product-price">$79.99</p>
+            <div class="product-actions">
+              <a class="btn btn-secondary" href="product-details.html">View</a>
+              <a class="btn btn-primary" href="cart.html">Add to Cart</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" aria-label="Fitness Smart Watch">
+          <div class="product-media">
+            <img src="fitness-smart-watch.jpg" alt="Fitness Smart Watch" />
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Fitness Smart Watch</h3>
+            <p class="product-price">$129.00</p>
+            <div class="product-actions">
+              <a class="btn btn-secondary" href="product-details.html">View</a>
+              <a class="btn btn-primary" href="cart.html">Add to Cart</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" aria-label="Laptop">
+          <div class="product-media">
+            <img src="laptop.jpg" alt="Laptop" />
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Laptop</h3>
+            <p class="product-price">$499.00</p>
+            <div class="product-actions">
+              <a class="btn btn-secondary" href="product-details.html">View</a>
+              <a class="btn btn-primary" href="cart.html">Add to Cart</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" aria-label="Mug">
+          <div class="product-media">
+            <img src="mug.avif" alt="Mug" />
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Ceramic Mug</h3>
+            <p class="product-price">$19.99</p>
+            <div class="product-actions">
+              <a class="btn btn-secondary" href="product-details.html">View</a>
+              <a class="btn btn-primary" href="cart.html">Add to Cart</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" aria-label="Sneaker">
+          <div class="product-media">
+            <img src="sneaker.avif" alt="Sneaker" />
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Street Sneakers</h3>
+            <p class="product-price">$89.99</p>
+            <div class="product-actions">
+              <a class="btn btn-secondary" href="product-details.html">View</a>
+              <a class="btn btn-primary" href="cart.html">Add to Cart</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" aria-label="Perfume">
+          <div class="product-media">
+            <img src="perfume.webp" alt="Perfume" />
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Signature Perfume</h3>
+            <p class="product-price">$59.50</p>
+            <div class="product-actions">
+              <a class="btn btn-secondary" href="product-details.html">View</a>
+              <a class="btn btn-primary" href="cart.html">Add to Cart</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" aria-label="Wireless Charger">
+          <div class="product-media">
+            <img src="wireless.jpg" alt="Wireless Charger" />
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Wireless Charger</h3>
+            <p class="product-price">$34.99</p>
+            <div class="product-actions">
+              <a class="btn btn-secondary" href="product-details.html">View</a>
+              <a class="btn btn-primary" href="cart.html">Add to Cart</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" aria-label="Duffel Bag Planner">
+          <div class="product-media">
+            <img src="planner.jpg" alt="Planner" />
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Monthly Planner</h3>
+            <p class="product-price">$14.99</p>
+            <div class="product-actions">
+              <a class="btn btn-secondary" href="product-details.html">View</a>
+              <a class="btn btn-primary" href="cart.html">Add to Cart</a>
+            </div>
+          </div>
+        </article>
       </div>
-      <div class="category-row">
-        <button type="button" data-category="All" class="filter-pill active">All</button>
-        <button type="button" data-category="Electronics" class="filter-pill">Electronics</button>
-        <button type="button" data-category="Home" class="filter-pill">Home</button>
-        <button type="button" data-category="Travel" class="filter-pill">Travel</button>
-        <button type="button" data-category="Fitness" class="filter-pill">Fitness</button>
-        <button type="button" data-category="Fashion" class="filter-pill">Fashion</button>
-        <button type="button" data-category="Beauty" class="filter-pill">Beauty</button>
-        <button type="button" data-category="Office" class="filter-pill">Office</button>
-      </div>
-      <div id="productGrid" class="product-grid"></div>
     </section>
   </main>
+
 
   <footer>
     <p>© 2026 ShopFlow. Build your online shop with confidence.</p>
