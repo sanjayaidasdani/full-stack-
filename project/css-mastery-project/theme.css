@@ -392,10 +392,11 @@ main{
 .product-media img,
 .detail-image img{
   width:100%;
-  height:auto;
+  height:220px;
   display:block;
   object-fit:cover;
 }
+
 
 .product-body,
 .detail-copy,
