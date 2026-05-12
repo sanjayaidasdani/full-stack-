@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment — ShopFlow</title>
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+    <nav>
+    <a class="nav-logo" href="landing-page.html">ShopFlow</a>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="account.html">Account</a>
+      <a href="order-history.html">Orders</a>
+      <a href="cart.html">Cart <span id="cartCount">0</span></a>
+      <a href="signin.html" class="auth-btn auth-btn-signin">Sign In</a>
+      <a href="signup.html" class="auth-btn auth-btn-signup">Sign Up</a>
+    </div>
+  </nav>
+
+
+  <main class="page payment-page">
+    <section class="section">
+      <div class="section-title">
+        <span class="eyebrow">Secure Payment</span>
+        <h2>Complete your purchase</h2>
+        <p>Enter your payment details to finalize the order.</p>
+      </div>
+      <div class="payment-panel">
+        <div class="payment-summary">
+          <h3>Order total</h3>
+          <p id="paymentTotal">$0.00</p>
+          <div id="paymentSummaryList" class="order-summary-list"></div>
+        </div>
+        <div class="payment-form">
+          <form id="paymentForm">
+            <label for="cardName">Name on card</label>
+            <input id="cardName" type="text" placeholder="Jane Doe" required />
+            <label for="cardNumber">Card number</label>
+            <input id="cardNumber" type="text" placeholder="1234 5678 9012 3456" required />
+            <div class="grid-2">
+              <div>
+                <label for="expiry">Expiry</label>
+                <input id="expiry" type="text" placeholder="12/26" required />
+              </div>
+              <div>
+                <label for="cvc">CVC</label>
+                <input id="cvc" type="text" placeholder="123" required />
+              </div>
+            </div>
+            <button id="payButton" class="btn btn-primary" type="submit">Pay now</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ShopFlow. Build your online shop with confidence.</p>
+  </footer>
+</body>
+</html>

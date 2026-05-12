@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account — ShopFlow</title>
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+    <nav>
+    <a class="nav-logo" href="landing-page.html">ShopFlow</a>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="account.html">Account</a>
+      <a href="order-history.html">Orders</a>
+      <a href="cart.html">Cart <span id="cartCount">0</span></a>
+      <a href="signin.html" class="auth-btn auth-btn-signin">Sign In</a>
+      <a href="signup.html" class="auth-btn auth-btn-signup">Sign Up</a>
+    </div>
+  </nav>
+
+
+  <main class="page account-page">
+    <section class="section">
+      <div class="section-title">
+        <span class="eyebrow">Account</span>
+        <h2>Manage your profile</h2>
+        <p>Update your contact details and track your ShopFlow membership.</p>
+      </div>
+      <div class="account-panel">
+        <form id="accountForm">
+          <label for="accountName">Full name</label>
+          <input id="accountName" type="text" placeholder="Jane Doe" />
+          <label for="accountEmail">Email address</label>
+          <input id="accountEmail" type="email" placeholder="you@example.com" />
+          <label for="accountAddress">Shipping address</label>
+          <input id="accountAddress" type="text" placeholder="123 Main Street" />
+          <button id="saveAccount" class="btn btn-primary" type="submit">Save changes</button>
+          <button id="signOutButton" class="btn btn-secondary" type="button">Sign Out</button>
+        </form>
+      </div>
+    </section>
+    <section class="section wishlist-section">
+      <div class="section-title">
+        <span class="eyebrow">Wishlist</span>
+        <h2>Your saved favorites</h2>
+        <p>Keep track of products you want to revisit later.</p>
+      </div>
+      <div id="wishlistCards" class="product-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ShopFlow. Build your online shop with confidence.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order History — ShopFlow</title>
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+    <nav>
+    <a class="nav-logo" href="landing-page.html">ShopFlow</a>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="account.html">Account</a>
+      <a href="order-history.html">Orders</a>
+      <a href="cart.html">Cart <span id="cartCount">0</span></a>
+      <a href="signin.html" class="auth-btn auth-btn-signin">Sign In</a>
+      <a href="signup.html" class="auth-btn auth-btn-signup">Sign Up</a>
+    </div>
+  </nav>
+
+
+  <main class="page">
+    <section class="section">
+      <div class="section-title">
+        <span class="eyebrow">Order History</span>
+        <h2>Your past orders</h2>
+        <p>Review completed purchases and track your ShopFlow journey.</p>
+      </div>
+      <div class="history-card">
+        <table class="history-table">
+          <thead><tr><th>Order ID</th><th>Date</th><th>Status</th><th>Total</th></tr></thead>
+          <tbody id="orderHistoryBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ShopFlow. Build your online shop with confidence.</p>
+  </footer>
+</body>
+</html>

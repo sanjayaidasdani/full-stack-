@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopFlow | Product Details</title>
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+    <nav>
+    <a class="nav-logo" href="landing-page.html">ShopFlow</a>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="account.html">Account</a>
+      <a href="order-history.html">Orders</a>
+      <a href="cart.html">Cart <span id="cartCount">0</span></a>
+      <a href="signin.html" class="auth-btn auth-btn-signin">Sign In</a>
+      <a href="signup.html" class="auth-btn auth-btn-signup">Sign Up</a>
+    </div>
+  </nav>
+
+
+  <main class="page detail-page">
+    <section class="detail-panel">
+      <div class="detail-image">
+        <img id="detailImage" src="shopflow-product.svg" alt="Product image" />
+      </div>
+      <div class="detail-copy">
+        <span class="eyebrow">Product Detail</span>
+        <h2 id="detailTitle">Storefront Starter Kit</h2>
+        <p class="detail-price" id="detailPrice">$199</p>
+        <p id="detailDescription">A versatile product designed to showcase your catalog and drive customer purchases.</p>
+        <div id="detailTags" class="tag-row"></div>
+        <div class="detail-quantity">
+          <label for="detailQuantity">Quantity</label>
+          <input id="detailQuantity" type="number" min="1" value="1" />
+        </div>
+        <div class="detail-actions">
+          <button id="detailWishlistButton" class="btn btn-secondary">Add to Wishlist</button>
+          <button id="detailAddButton" class="btn btn-primary">Add to Cart</button>
+        </div>
+        <a class="btn btn-secondary" href="products.html">Continue Shopping</a>
+      </div>
+    </section>
+    <section class="section review-section">
+      <div class="section-title">
+        <span class="eyebrow">Reviews</span>
+        <h2>Customer feedback</h2>
+        <p>Read reviews from shoppers or leave your own rating.</p>
+      </div>
+      <div id="reviewSummary" class="review-summary"></div>
+      <div id="reviewList" class="review-list"></div>
+      <form id="reviewForm" class="review-form">
+        <label for="reviewRating">Rating</label>
+        <select id="reviewRating">
+          <option value="5">5 stars</option>
+          <option value="4">4 stars</option>
+          <option value="3">3 stars</option>
+          <option value="2">2 stars</option>
+          <option value="1">1 star</option>
+        </select>
+        <label for="reviewComment">Your review</label>
+        <textarea id="reviewComment" rows="4" placeholder="Share your thoughts about this product"></textarea>
+        <button class="btn btn-primary" type="submit">Submit review</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ShopFlow. Build your online shop with confidence.</p>
+  </footer>
+</body>
+</html>

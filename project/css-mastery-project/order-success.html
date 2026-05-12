@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Confirmation — ShopFlow</title>
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+    <nav>
+    <a class="nav-logo" href="landing-page.html">ShopFlow</a>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="account.html">Account</a>
+      <a href="order-history.html">Orders</a>
+      <a href="cart.html">Cart <span id="cartCount">0</span></a>
+      <a href="signin.html" class="auth-btn auth-btn-signin">Sign In</a>
+      <a href="signup.html" class="auth-btn auth-btn-signup">Sign Up</a>
+    </div>
+  </nav>
+
+
+  <main class="page success-page">
+    <section class="section success-panel">
+      <div class="success-badge">Order confirmed</div>
+      <h2>Thank you for your purchase.</h2>
+      <p>Your order is on its way and will arrive soon with premium packaging.</p>
+      <div class="success-details">
+        <p>Order ID <strong id="successOrderId">SFL-XXXXXX</strong></p>
+        <p>Total paid <strong id="successTotal">$0.00</strong></p>
+        <p>Shipping method <strong id="successShipping">Standard</strong></p>
+        <p>Estimated delivery <strong>3–5 business days</strong></p>
+      </div>
+      <div class="success-actions">
+        <a class="btn btn-primary" href="products.html">Continue shopping</a>
+        <a class="btn btn-secondary" href="order-history.html">View orders</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ShopFlow. Build your online shop with confidence.</p>
+  </footer>
+</body>
+</html>

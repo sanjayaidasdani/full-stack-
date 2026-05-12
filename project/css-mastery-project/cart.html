@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart — ShopFlow</title>
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+    <nav>
+    <a class="nav-logo" href="landing-page.html">ShopFlow</a>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="account.html">Account</a>
+      <a href="order-history.html">Orders</a>
+      <a href="cart.html">Cart <span id="cartCount">0</span></a>
+      <a href="signin.html" class="auth-btn auth-btn-signin">Sign In</a>
+      <a href="signup.html" class="auth-btn auth-btn-signup">Sign Up</a>
+    </div>
+  </nav>
+
+
+  <main class="page">
+    <section class="section">
+      <div class="section-title">
+        <span class="eyebrow">Cart</span>
+        <h2>Your selections</h2>
+        <p>Review items, adjust quantities, and proceed to secure checkout.</p>
+      </div>
+      <div class="cart-table-wrap">
+        <table class="cart-table">
+          <thead>
+            <tr><th>Product</th><th>Price</th><th>Qty</th><th>Total</th><th></th></tr>
+          </thead>
+          <tbody id="cartBody"></tbody>
+        </table>
+      </div>
+      <div class="cart-summary">
+        <div><p>Subtotal</p><p id="cartSubtotal">$0.00</p></div>
+        <div><p>Shipping</p><p>$20.00</p></div>
+        <div><p>Tax</p><p>$0.00</p></div>
+        <div class="total-row"><p>Total</p><p id="cartTotal">$0.00</p></div>
+        <a class="btn btn-primary" href="checkout.html">Proceed to Checkout</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ShopFlow. Build your online shop with confidence.</p>
+  </footer>
+</body>
+</html>

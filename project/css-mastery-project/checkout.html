@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — ShopFlow</title>
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+    <nav>
+    <a class="nav-logo" href="landing-page.html">ShopFlow</a>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="account.html">Account</a>
+      <a href="order-history.html">Orders</a>
+      <a href="cart.html">Cart <span id="cartCount">0</span></a>
+      <a href="signin.html" class="auth-btn auth-btn-signin">Sign In</a>
+      <a href="signup.html" class="auth-btn auth-btn-signup">Sign Up</a>
+    </div>
+  </nav>
+
+
+  <main class="page checkout-page">
+    <section class="section">
+      <div class="section-title">
+        <span class="eyebrow">Checkout</span>
+        <h2>Confirm your order</h2>
+        <p>Secure checkout, fast shipping, and premium handling for every purchase.</p>
+      </div>
+      <div class="checkout-grid">
+        <div class="checkout-card">
+          <h3>Order summary</h3>
+          <div class="order-summary-row"><span>Subtotal</span><span id="checkoutSubtotal">$0.00</span></div>
+          <div class="order-summary-row"><span>Shipping</span><span id="checkoutShipping">$20.00</span></div>
+          <div class="order-summary-row"><span>Tax</span><span id="checkoutTax">$0.00</span></div>
+          <div class="order-summary-row total-row"><span>Total</span><span id="checkoutTotal">$0.00</span></div>
+          <div class="checkout-actions">
+            <button id="continueToPayment" class="btn btn-primary" type="button">Continue to Payment</button>
+          </div>
+        </div>
+        <div class="checkout-card">
+          <h3>Shipping details</h3>
+          <form id="checkoutForm">
+            <label for="fullName">Full name</label>
+            <input id="fullName" name="fullName" type="text" placeholder="Jane Doe" />
+            <label for="address">Address</label>
+            <input id="address" name="address" type="text" placeholder="123 Main Street" />
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" placeholder="New York" />
+            <label>Shipping method</label>
+            <div class="shipping-options">
+              <label><input type="radio" name="shippingMethod" value="standard" checked /> Standard shipping — $20</label>
+              <label><input type="radio" name="shippingMethod" value="express" /> Express shipping — $40</label>
+            </div>
+          </form>
+        </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ShopFlow. Build your online shop with confidence.</p>
+  </footer>
+</body>
+</html>

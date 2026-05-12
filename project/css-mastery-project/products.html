@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopFlow | Shop</title>
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+    <nav>
+    <a class="nav-logo" href="landing-page.html">ShopFlow</a>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="account.html">Account</a>
+      <a href="order-history.html">Orders</a>
+      <a href="cart.html">Cart <span id="cartCount">0</span></a>
+      <a href="signin.html" class="auth-btn auth-btn-signin">Sign In</a>
+      <a href="signup.html" class="auth-btn auth-btn-signup">Sign Up</a>
+    </div>
+  </nav>
+
+
+  <main class="page">
+    <section class="section">
+      <div class="section-title">
+        <span class="eyebrow">Shop</span>
+        <h2>Shop Categories</h2>
+        <p>Browse top-selling products and preview your store catalog.</p>
+      </div>
+      <div class="filter-row">
+        <input id="productSearch" class="search-input" type="search" placeholder="Search products" />
+        <select id="productSort" class="sort-select">
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+        </select>
+      </div>
+      <div class="category-row">
+        <button type="button" data-category="All" class="filter-pill active">All</button>
+        <button type="button" data-category="Electronics" class="filter-pill">Electronics</button>
+        <button type="button" data-category="Home" class="filter-pill">Home</button>
+        <button type="button" data-category="Travel" class="filter-pill">Travel</button>
+        <button type="button" data-category="Fitness" class="filter-pill">Fitness</button>
+        <button type="button" data-category="Fashion" class="filter-pill">Fashion</button>
+        <button type="button" data-category="Beauty" class="filter-pill">Beauty</button>
+        <button type="button" data-category="Office" class="filter-pill">Office</button>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ShopFlow. Build your online shop with confidence.</p>
+  </footer>
+</body>
+</html>
